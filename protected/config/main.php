@@ -5,12 +5,16 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+$configRoot=dirname(__FILE__);
+$params = require($configRoot.'/params.php');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Solo Sports',
+        'theme'=>'first',
 
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array('log','bootstrap'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -23,9 +27,12 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'admin',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+                        'generatorPaths'=>array(
+                            'bootstrap.gii', // since 0.9.1
+                            ),
 		),
 		
 	),
@@ -60,8 +67,8 @@ return array(
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
-            'errorAction'=>'site/error',
-        ),
+                    'errorAction'=>'site/error',
+                    ),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -77,6 +84,9 @@ return array(
 				*/
 			),
 		),
+                'bootstrap'=>array(
+                    'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+                ),
 	),
 
 	// application-level parameters that can be accessed

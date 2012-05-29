@@ -1,0 +1,26 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 7, ../sass/ie.scss */
+.brand {
+  float: left;
+  width: 30%;
+}
+
+/* line 11, ../sass/ie.scss */
+.nav-collapse {
+  float: left;
+  width: 70% !important;
+}
+
+/* line 16, ../sass/ie.scss */
+.course_post {
+  width: 250px !important;
+}
+
+/* line 20, ../sass/ie.scss */
+.course_post_wrapper {
+  width: 100%;
+}

@@ -14,3 +14,11 @@
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
+
+
+<?php $this->widget('bootstrap.widgets.BootButton', array(
+    'label'=>'Hover me',
+    'type'=>'danger',
+    'htmlOptions'=>array('data-title'=>'Heading', 'data-content'=>'Content ...', 'rel'=>'popover'),
+)); ?>
+
