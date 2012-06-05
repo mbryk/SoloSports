@@ -20,9 +20,12 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'application.modules.user.models.*',
+                'application.modules.user.components.*',
 	),
 
 	'modules'=>array(
+                'user',
 		// uncomment the following to enable the Gii tool
 		
 		'gii'=>array(
@@ -42,6 +45,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+                        'loginUrl' => array('/user/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		

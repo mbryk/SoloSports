@@ -1,5 +1,6 @@
 <?php
-
+$configRoot=dirname(__FILE__);
+$params = require($configRoot.'/params.php');
 // This is the configuration for yiic console application.
 // Any writable CConsoleApplication properties can be configured here.
 return array(
