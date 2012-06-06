@@ -35,15 +35,17 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="brand" href="#"><img src="<?php echo Yii::app()->request->baseUrl?>/imgs/logo.png"</a>
+          </div>
+          <div>          
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -54,7 +56,7 @@
                   <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', Yii::app()->getModule('user')->logoutUrl); ?> </li>
               </ul>
           </div><!--/.nav-collapse -->
-        </div>
+          </div>
       </div>
     </div>
 
@@ -71,20 +73,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
-
-
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-transition.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-alert.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-modal.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-dropdown.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-tab.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-tooltip.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-popover.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-button.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-collapse.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-carousel.js"></script>
-    <script src="<?php echo Yii::app()->theme->baseUrl ?>/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
