@@ -1,0 +1,22 @@
+/* 
+    Document   : style
+    Created on : Oct 23, 2012, 10:12:42 PM
+    Author     : mark
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+}
+.container {
+    display: block;
+}
+
+#header {
+    padding-bottom: 10px;
+    position: relative;
+}
+.hero-unit p, .hero-unit h1{
+    text-align: center;
+    padding: 5px 0;
+    
+}

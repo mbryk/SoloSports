@@ -89,7 +89,7 @@ return array(
 			),
 		),
                 'bootstrap'=>array(
-                    'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+                    'class'=>'application.extensions.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
                 ),
 	),
 
@@ -97,6 +97,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'mark@solosports.com',
+		'adminEmail'=>'mark@markbryk.in',
 	),
 );
