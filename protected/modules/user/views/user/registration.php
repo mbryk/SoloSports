@@ -1,3 +1,4 @@
+<div class="mid-well">
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
 $this->breadcrumbs=array(
 	UserModule::t("Registration"),
@@ -95,3 +96,4 @@ $this->breadcrumbs=array(
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 <?php endif; ?>
+</div>

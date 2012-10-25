@@ -19,27 +19,34 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33169527-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>       
   </head>
 
-  <body>
-
+  <!--<body style="background: url(<?php echo Yii::app()->theme->baseUrl?>/css/imgs/ski_mtn_bg.jpg) no-repeat center center fixed; ">-->
+<body>
     <div id="header" class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png"></a>
           </div>
           <div class="lower-header">          
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a></li>
               <li><a href="contact">Contact</a></li>
-            </ul>
-              <ul class="nav" style="float:right">
                   <li> <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl); ?> </li>
                   <li> <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Register"), Yii::app()->getModule('user')->registrationUrl); ?> </li>
                   <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl); ?> </li>
@@ -52,9 +59,6 @@
 
     <div class="container">
         <?php echo $content ?>
-      <hr>
-
-
     </div> <!-- /container -->
 
   </body>

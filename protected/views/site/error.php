@@ -1,3 +1,4 @@
+<div class="mid-well">
 <?php
 $this->pageTitle=Yii::app()->name . ' - Error';
 $this->breadcrumbs=array(
@@ -9,4 +10,6 @@ $this->breadcrumbs=array(
 
 <div class="error">
 <?php echo CHtml::encode($message); ?>
+</div>
+
 </div>

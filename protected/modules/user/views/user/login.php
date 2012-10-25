@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 	UserModule::t("Login"),
 );
 ?>
-
+<div class="mid-well">
 <h1><?php echo UserModule::t("Login"); ?></h1>
 
 <?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
@@ -77,3 +77,4 @@ $form = new CForm(array(
     ),
 ), $model);
 ?>
+</div>
