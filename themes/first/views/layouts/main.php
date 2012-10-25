@@ -35,16 +35,11 @@
 </script>       
   </head>
 
-  <!--<body style="background: url(<?php echo Yii::app()->theme->baseUrl?>/css/imgs/ski_mtn_bg.jpg) no-repeat center center fixed; ">-->
 <body>
     <div id="header" class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png"></a>
-          </div>
-          <div class="lower-header">          
           <div class="nav-collapse">
-            <ul class="nav">
+              <ul class="nav">
+              <li><a href="http://solosports.markbryk.in/ ">Home</a></li>
               <li><a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a></li>
               <li><a href="contact">Contact</a></li>
                   <li> <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl); ?> </li>
@@ -52,7 +47,10 @@
                   <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl); ?> </li>
                   <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', Yii::app()->getModule('user')->logoutUrl); ?> </li>
               </ul>
-          </div><!--/.nav-collapse -->
+          </div>        
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="<?php echo $this->getUniqueId()=='site' && $this->action->Id=='index' ? '135': '50'; ?>"></a>
           </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 .container {
-    display: block;
+    //display: block;
 }
 .content {
 }
@@ -50,6 +50,7 @@ body {
 }
 .navbar .nav{
     float:right;
+    padding-right: 20px;
 }
 .lower-header li{
     color:black;
