@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/clear_cool.ico" type="image/x-icon" />    
 
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/extra.css" type="text/css" media="screen, projection" />
     
     <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
 

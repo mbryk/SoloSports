@@ -17,11 +17,12 @@ class LoginController extends Controller
 				$model->attributes=$_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
-					$this->lastViset();
-					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
-						$this->redirect(Yii::app()->controller->module->returnUrl);
-					else
-						$this->redirect(Yii::app()->user->returnUrl);
+					$this->lastVisit();
+                                        
+					//if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
+					//	$this->redirect(Yii::app()->controller->module->returnUrl);
+					//else
+                                        $this->redirect(Yii::app()->user->returnUrl);
 				}
 			}
 			// display the login form
@@ -30,7 +31,7 @@ class LoginController extends Controller
 			$this->redirect(Yii::app()->controller->module->returnUrl);
 	}
 	
-	private function lastViset() {
+	private function lastVisit() {
 		$lastVisit = User::model()->notsafe()->findByPk(Yii::app()->user->id);
 		$lastVisit->lastvisit = time();
 		$lastVisit->save();

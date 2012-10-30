@@ -1,0 +1,232 @@
+#quiz .header-inner{
+	width:760px;
+	}
+#quiz #quiz-container{
+	position:relative;
+	margin:0 auto;
+	width:790px;
+	}
+#quiz #quiz-container .page{
+	display:none;
+	}
+#quiz #quiz-container img{
+	display:block;
+	}
+#quiz #quiz-container img{
+	display:block;
+	-ms-interpolation-mode:bicubic;
+	}
+#quiz #quiz-container #flash-message{
+	height:626px;
+	width:630px;
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+	}
+#quiz #quiz-container #flash-message p{
+	font-size:1.2em;
+	line-height:130%;
+	margin:0 auto;
+	width:600px;
+	padding-top:2.5em;
+	color:#000;
+	}
+#quiz #quiz-container #flash-message img{
+	margin:40px auto 0 auto;
+	}
+#quiz #quiz-container .s{
+	text-align:center;
+	height:50px;
+	width:760px;
+	overflow:hidden;
+	margin:0 auto;
+	position:relative;
+	left:-4px;
+	background:transparent url(http://resources-ms-ak.visualdna.com/personality.visualdna.com/live/20110512110219/images/quiz/statement-bg-760.png) top left no-repeat;
+	}
+#quiz #quiz-container .s h3{
+	font-size:1.5em;
+	font-weight:normal;
+	line-height:50px;
+	font-weight:bold;
+	color:#2b2b2b;
+	width:760px;
+	height:50px;
+	float:left;
+	}
+#quiz #quiz-container .s h3 strong{
+	display:block;
+	margin-left:20px;
+	width:720px;
+	font-weight:bold;
+	float:left;
+	}
+#quiz #quiz-container .smaller h3{
+	font-size:1.2em;
+	}
+#quiz #quiz-container .q{
+	width:630px;
+	overflow:hidden;
+	margin:0 auto;
+	margin-top:14px;
+	}
+#quiz #quiz-container ul{
+	list-style:none;
+	float:left;
+	display:inline;
+	}
+#quiz #quiz-container li{
+	float:left;
+	display:inline;
+	cursor:pointer;
+	text-align:center;
+	width:156px;
+	height:156px;
+	}
+#quiz #quiz-container li div{
+	width:156px;
+	height:156px;
+	position:relative;
+	float:left;
+	}
+#quiz #quiz-container li div div{
+	width:134px;
+	height:134px;
+	top:6px;
+	left:6px;
+	position:absolute;
+	}
+#quiz #quiz-container li a{
+	text-decoration:none;
+	}
+#quiz #quiz-container li a img{
+	position:absolute;
+	top:6px;
+	left:6px;
+	z-index:2;
+	width:140px;
+	height:140px;
+	cursor:pointer;
+	-ms-interpolation-mode:bicubic;
+	}
+#quiz #quiz-container .p{
+	width:762px;
+	margin:0 auto;
+	margin-bottom:20px;
+	left:-4px;
+	height:19px;
+	border-bottom:1px solid #dfdfdf;
+	overflow:hidden;
+	position:relative;
+	background-color:#d8d8d8;
+	background-image:-moz-linear-gradient(top,#fff,#cecece);
+	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(1,#cecece));
+	background-image:linear-gradient(top,#fff,#cecece);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#ffffff,EndColorStr=#cecece);
+	}
+#quiz #quiz-container .p .progress{
+	text-align:left;
+	width:754px;
+	display:block;
+	height:14px;
+	position:absolute;
+	left:4px;
+	top:3px;
+	overflow:hidden;
+	}
+#quiz #quiz-container .p .progress span{
+	height:14px;
+	display:block;
+	background-color:#585858;
+	overflow:hidden;
+	}
+#quiz #quiz-container #f{
+	width:630px;
+	height:400px;
+	position:relative;
+	margin:0 auto;
+	margin-bottom:20px;
+	z-index:1;
+	background:transparent;
+	}
+#quiz #quiz-container #f p{
+	font-size:1.4em;
+	width:19em;
+	margin:4em auto 0 auto;
+	color:#333;
+	}
+#quiz #quiz-container #f img{
+	margin:0 auto;
+	margin-top:70px;
+	}
+#quiz #footer{
+	width:618px;
+	margin:0 auto 20px auto;
+	position:relative;
+	left:-4px;
+	line-height:18px;
+	}
+#quiz #footer #poweredby{
+	float:right;
+	text-align:right;
+	position:relative;
+	top:-3px;
+	}
+#quiz #footer #poweredby p{
+	font-size:.6875em;
+	color:#333;
+	line-height:18px;
+	width:130px;
+	float:right;
+	}
+#quiz #footer #poweredby p span{
+	display:block;
+	float:left;
+	padding-right:6px;
+	}
+#quiz #footer #poweredby a{
+	display:block;
+	float:right;
+	text-indent:-9999px;
+	margin-top:0;
+	font-size:1em;
+	text-decoration:none;
+	width:62px;
+	height:17px;
+	overflow:hidden;
+	background:url("http://resources-ms-ak.visualdna.com/personality.visualdna.com/live/20110512110219/images/quiz/visualdna-footer-white.gif") no-repeat scroll 0 0 transparent;
+	position:relative;
+	top:1px;
+	}
+#quiz #footer #poweredby a em{
+	visibility:hidden;
+	}
+#quiz #footer a{
+	color:#333;
+	font-size:.6875em;
+	float:left;
+	}
+#quiz #footer .vdnaSaved{
+	float:left;
+	margin-left:20px;
+	}
+#quiz #footer .vdnaSaved input{
+	float:left;
+	margin:0 5px 0 0;
+	display:inline;
+	height:13px;
+	width:13px;
+	position:relative;
+	top:3px;
+	}
+#quiz #footer .vdnaSaved a{
+	margin:0;
+	}
+#quiz #f img{
+	margin:0 auto;
+	margin-top:48px;
+	}
+#quiz #pagefinish{
+	width:790px;
+	margin:0 auto;
+	}
