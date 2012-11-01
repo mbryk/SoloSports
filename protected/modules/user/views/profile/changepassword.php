@@ -1,4 +1,5 @@
-<?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Change Password");
+<div class="mid-well">
+    <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Change Password");
 $this->breadcrumbs=array(
 	UserModule::t("Profile") => array('/user/profile'),
 	UserModule::t("Change Password"),
@@ -39,3 +40,4 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>

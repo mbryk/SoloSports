@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/extra.css" type="text/css" media="screen, projection" />
-    
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/main.js"></script>
     <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
 
 
@@ -38,6 +38,7 @@
   </head>
 
 <body>
+    <?php if($this->getUniqueId()=='site' && $this->action->Id=='index') echo '<!--' ?>
     <div id="header" class="navbar navbar-fixed-top">
           <div class="nav-collapse">
               <ul class="nav">
@@ -56,10 +57,26 @@
           </div>
       </div>
     </div>
-
-    <div class="container">
+    
+    <?php if($this->getUniqueId()=='site' && $this->action->Id=='index') echo '-->' ?>
+    
+    <div class="container main-container">
         <?php echo $content ?>
     </div> <!-- /container -->
-
+    
+    
+<div class="footer">
+	<div class="footer-inner">
+    	<div class="left-sec"><a href="<?php echo Yii::app()->request->baseUrl ?>/">Home</a> |
+            <a href="/site/page/view/about">About</a> |  
+            <a href="/site/page/view/glossary">Glossary</a> | 
+            <a href="/site/page/view/rules"> Rules</a> |  
+            <a href="/site/page/view/terms">Terms of Use</a>
+        </div>
+        <div class="right-sec"><a href="http://www.facebook.com/Pinbooster" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/facebook.jpg" width="34" height="33"  alt="Facebook"/></a> <a href="https://twitter.com/pinbooster" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/twitter.jpg" width="34" height="33" alt="twitter" /></a> <a href="http://pinterest.com/pinbooster/" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/pinbooster.jpg" width="34" height="33" alt="Pinbooster" /></a> <a href="mailto:hello@pinbooster.com" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/mail.jpg" width="34" height="33" alt="Mail" /></a></div>
+        <div class="cleardiv"></div>
+    </div> 
+    
+</div>
   </body>
 </html>

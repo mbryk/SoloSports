@@ -9,7 +9,9 @@
             <div class="q">
                 <ul class="ql">
                     
-                    <li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52950" onclick="return false;" href="#"><img src="http://cdawgownd.files.wordpress.com/2008/11/skiing.jpg" alt=""></a></div></li><li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52964" onclick="return false;" href="#"><img src="http://www.off-road.com/aimages/articlestandard/snowmobile/182008/512666/IMG_2946orc.jpg" alt=""></a></div></li><li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52954" onclick="return false;" href="#"><img src="http://www.chileski.net/images/chillan/snowboard.jpg" alt=""></a></div></li>
+                    <li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52950" onclick="return false;" href="#"><img src="http://cdawgownd.files.wordpress.com/2008/11/skiing.jpg" alt=""></a></div></li>
+                    <li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52964" onclick="return false;" href="#"><img src="http://www.off-road.com/aimages/articlestandard/snowmobile/182008/512666/IMG_2946orc.jpg" alt=""></a></div></li>
+                    <li><div><div style="background-color: rgb(221, 102, 102); overflow: hidden; top: 6px; width: 140px; height: 140px; left: 6px; "></div><a class="quizPageImage" data-visualdna-choice="choice_52954" onclick="return false;" href="#"><img src="http://www.chileski.net/images/chillan/snowboard.jpg" alt=""></a></div></li>
                     
                 </ul>
             </div>
@@ -183,7 +185,7 @@ var VDNA_userID = '53730fb4-73f5-102f-b9af-001ec9d50ffe';
             /* obj ID */        Ba27 : ""
     };
     </script>
-    <script type="text/javascript" src="http://resources-ms-ak.visualdna.com/personality.visualdna.com/live/20110512110219/js/concat.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/quiz.js"></script>
     <script type="text/javascript">
     sendImpressionEvent('QUIZ_START_PAGE');
 

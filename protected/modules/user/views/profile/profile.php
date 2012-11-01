@@ -1,3 +1,4 @@
+<div class="mid-well">
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Profile");
 $this->breadcrumbs=array(
 	UserModule::t("Profile"),
@@ -10,7 +11,8 @@ $this->breadcrumbs=array(
 <?php echo Yii::app()->user->getFlash('profileMessage'); ?>
 </div>
 <?php endif; ?>
-<table class="dataGrid">
+
+<table class="table">
 <tr>
 	<th class="label"><?php echo CHtml::encode($model->getAttributeLabel('username')); ?>
 </th>
@@ -59,3 +61,4 @@ $this->breadcrumbs=array(
 </td>
 </tr>
 </table>
+</div>

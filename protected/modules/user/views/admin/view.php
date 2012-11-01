@@ -1,3 +1,4 @@
+<div class="mid-well">
 <?php
 $this->breadcrumbs=array(
 	UserModule::t('Users')=>array('admin'),
@@ -61,3 +62,4 @@ $this->breadcrumbs=array(
 	
 
 ?>
+</div>

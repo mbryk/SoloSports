@@ -56,8 +56,9 @@ class UserModule extends CWebModule
 	public $recoveryUrl = array("/user/recovery/recovery");
 	public $loginUrl = array("/user/login");
 	public $logoutUrl = array("/user/logout");
-	public $profileUrl = array("/user/profile");
-	public $returnUrl = array("/user/profile");
+	//public $profileUrl = array("/user/profile");
+        public $profileUrl = array("/main");
+	public $returnUrl = array("/main");
 	public $returnLogoutUrl = array("/user/login");
 	
 	public $fieldsMessage = '';
