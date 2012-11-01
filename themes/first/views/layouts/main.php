@@ -38,27 +38,16 @@
   </head>
 
 <body>
-    <?php if($this->getUniqueId()=='site' && $this->action->Id=='index') echo '<!--' ?>
+    <?php if(1) echo '<!--' ?>
     <div id="header" class="navbar navbar-fixed-top">
-          <div class="nav-collapse">
-              <ul class="nav">
-              <li><a href="http://solosports.markbryk.in/ ">Home</a></li>
-              <li><a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a></li>
-              <li><a href="contact">Contact</a></li>
-                  <li> <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl); ?> </li>
-                  <li> <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Register"), Yii::app()->getModule('user')->registrationUrl); ?> </li>
-                  <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl); ?> </li>
-                  <li> <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', Yii::app()->getModule('user')->logoutUrl); ?> </li>
-              </ul>
-          </div>        
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="<?php echo $this->getUniqueId()=='site' && $this->action->Id=='index' ? '135': '50'; ?>"></a>
+          <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="135"></a>
           </div>
       </div>
     </div>
     
-    <?php if($this->getUniqueId()=='site' && $this->action->Id=='index') echo '-->' ?>
+    <?php if(1) echo '-->' ?>
     
     <div class="container main-container">
         <?php echo $content ?>
@@ -67,13 +56,18 @@
     
 <div class="footer">
 	<div class="footer-inner">
-    	<div class="left-sec"><a href="<?php echo Yii::app()->request->baseUrl ?>/">Home</a> |
-            <a href="/site/page/view/about">About</a> |  
-            <a href="/site/page/view/glossary">Glossary</a> | 
-            <a href="/site/page/view/rules"> Rules</a> |  
-            <a href="/site/page/view/terms">Terms of Use</a>
+    	<div class="left-sec">
+             <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="50"></a>
         </div>
-        <div class="right-sec"><a href="http://www.facebook.com/Pinbooster" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/facebook.jpg" width="34" height="33"  alt="Facebook"/></a> <a href="https://twitter.com/pinbooster" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/twitter.jpg" width="34" height="33" alt="twitter" /></a> <a href="http://pinterest.com/pinbooster/" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/pinbooster.jpg" width="34" height="33" alt="Pinbooster" /></a> <a href="mailto:hello@pinbooster.com" rel="nofollow"><img src="<?php echo Yii::app()->request->baseUrl; ?>/imgs/images/mail.jpg" width="34" height="33" alt="Mail" /></a></div>
+        <div class="right-sec">
+            <a href="<?php echo Yii::app()->request->baseUrl ?>/">Home</a> |
+            <a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a> |  
+            <a href="contact">Contact</a> | 
+            <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl).' | '; ?>
+            <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Register"), Yii::app()->getModule('user')->registrationUrl); ?>
+            <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl).' | '; ?>
+            <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', Yii::app()->getModule('user')->logoutUrl); ?>
+        </div>
         <div class="cleardiv"></div>
     </div> 
     

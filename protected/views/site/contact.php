@@ -1,4 +1,4 @@
-
+<div class="mid-well">
 <?php
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs=array(
@@ -79,4 +79,4 @@ If you have business inquiries or other questions, please fill out the following
 
 </div><!-- form -->
 
-<?php endif; ?>
+<?php endif; ?></div>
