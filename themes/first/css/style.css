@@ -6,7 +6,8 @@
         Purpose of the stylesheet follows.
 */
 body {
-    background: url(imgs/pam-skinning.jpg) no-repeat center center fixed; 
+    //background: url(imgs/pam-skinning.jpg) no-repeat center center fixed; 
+    background: url(imgs/body-bg.jpg) top center no-repeat #011226;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,18 +16,20 @@ body {
     
     margin:0;
     padding:0;
-    height:100%;    
+    height:100%;
+    
+    position:relative;
 }
 .main-container {
-    min-height:100%;
-    position:relative;
     padding:60px 0;   /* Height of the footer */
 }
-.content {
+#content {
+    padding-bottom:15px
+    
 }
 .footer{
     position:absolute;
-    bottom:0;
+    bottom:0; left:0;
     width:100%;
     height:60px;   /* Height of the footer */
     background:#444;
@@ -78,7 +81,7 @@ body {
     color:black;
 }
 .main-tbl #tabs{
-    margin-top:15px;
+    //margin-top:15px;
 }
 
 .prof-pic{
@@ -466,7 +469,7 @@ body {
 			padding:20px;
 		}
 		a:link,a:active,a:visited,a{
-			color:#336699;
+			//color:#336699;
 		}
 		.button:link,.button:active,.button:visited,.button,.button span,.button-small:link,.button-small:active,.button-small:visited,.button-small{
 			background-color:#336699;

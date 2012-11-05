@@ -59,13 +59,13 @@
   </ul>  
 </div>
     
-    
+    <div class="tabbable tabs-left">
     <ul class="nav nav-tabs" id="tabs">
   <li class="active"><a href="#trips" data-toggle="tab">Trips</a></li>
   <li><a href="#invites" data-toggle="tab">Invites</a></li>
   <li><a href="#create" data-toggle="tab">Create</a></li>
   <li><a href="#settings" data-toggle="tab">Settings</a></li>
-</ul>
+</ul></div>
  
 <div class="tab-content">
   <div class="tab-pane active" id="trips">

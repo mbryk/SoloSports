@@ -57,12 +57,12 @@
 <div class="footer">
 	<div class="footer-inner">
     	<div class="left-sec">
-             <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="50"></a>
+             <a class="brand" href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="50"></a>
         </div>
         <div class="right-sec">
             <a href="<?php echo Yii::app()->request->baseUrl ?>/">Home</a> |
             <a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a> |  
-            <a href="contact">Contact</a> | 
+            <a href="<?php echo Yii::app()->createUrl('site/contact') ?>">Contact</a> | 
             <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl).' | '; ?>
             <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Register"), Yii::app()->getModule('user')->registrationUrl); ?>
             <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl).' | '; ?>
