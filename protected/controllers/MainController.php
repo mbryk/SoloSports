@@ -5,8 +5,13 @@ class MainController extends Controller
 	public function actionIndex()
 	{
 		$this->render('index', array(
-                    'imgClass'=>array('-no','-inc','-no')
-                ));
+                    'imgClass'=>array(
+                        array('ski', '-inc'),
+                        array('tennis', '-inc'),
+                        array('golf', '-yes'),
+                        )
+                    )
+                );
 	}
 	public function actionTrips()
 	{

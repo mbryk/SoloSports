@@ -85,21 +85,61 @@
     <div id="sports-page">
     
     <ul class="thumbnails">
+        
+        <?php foreach($imgClass as $i=> $sport): ?>
         <li>
-    <a href="#" class="thumbnail"><!-- link to quiz....-->
-      <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/ski_label.jpg" class="sport<?php echo $imgClass[0] ?>" alt="">
+    <a href="#sModal<?php echo $i ?>" data-toggle="modal" class="thumbnail"><!-- modal to quiz....-->
+      <img src="<?php echo Yii::app()->theme->baseUrl.'/css/imgs/'.$sport[0].'_label.jpg' ?>" class="sport<?php echo $sport[1] ?>">
+      <?php if($sport[1]=='-inc'): ?>
+      <div style="position:relative">
+          <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/hp_in_progress.png" class="sport-in-progress" >
+      </div>
+        <?php endif; ?>
     </a>
   </li>
-  <li>
-    <a href="#" class="thumbnail">
-      <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/tennis_label.jpg" class="sport<?php echo $imgClass[1] ?>" alt="">
-    </a>
-  </li>
-  <li>
-    <a href="#" class="thumbnail">
-      <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/golf_label.jpeg" class="sport<?php echo $imgClass[2] ?>" alt="">
-    </a>
-  </li>
+  
+  
+  <div id="sModal<?php echo $i; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      
+      <?php switch($sport[1]): 
+          case '-yes': ?>
+      
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Congrats!</h3>
+  </div>
+  <div class="modal-body">
+    <p>You've finished registering for this sport.</p>
+    <p>Now go and find yourself some matchups!</p>
+  </div>      
+    
+      <?php break; case '-inc': ?>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Almost there</h3>
+  </div>
+  <div class="modal-body">
+    <p>Thanks for signing up.</p>
+    <p>Click here to take the quiz and get yourself rated and into the mix!</p>
+  </div>      
+      <?php break; case '-no': ?>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Not yet registered</h3>
+  </div>
+  <div class="modal-body">
+    <p>Loading...</p>
+  </div>      
+<?php      endswitch; ?>
+
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Ok</button>
+  </div>
+</div>
+        <?php endforeach; ?>
     </ul>
         </div>
 </div>
+
+  

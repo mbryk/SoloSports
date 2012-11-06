@@ -593,10 +593,20 @@ form input#mc-embedded-subscribe {
 }
 img.sport-no{
     opacity:.3;
+    width:270px;
+    height:200px;
 }
 img.sport-yes{
+    width:270px;
+    height:200px;
 }
 img.sport-inc{
     opacity: .5;
-    background-image: url(imgs/help.png);
+    width: 270px;
+    height:200px;
+}
+img.sport-in-progress{
+    position: absolute;
+    top:-200px;
+    height:135px;
 }
