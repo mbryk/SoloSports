@@ -53,7 +53,7 @@
       <div class="clear" style="padding-top: 15px "></div>    
       <!-- Example row of columns -->
       <div class="row" id="sport-labels">
-        <div class="span4">
+        <div class="span4"><!-- modal to login/take quiz as guest/learn more-->
             <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/ski_label.jpg"/></a>
         </div>
         <div class="span4">

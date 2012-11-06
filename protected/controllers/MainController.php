@@ -4,7 +4,13 @@ class MainController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->render('index', array(
+                    'imgClass'=>array('-no','-inc','-no')
+                ));
+	}
+	public function actionTrips()
+	{
+		$this->render('trips');
 	}
 
 	// Uncomment the following methods and override them if needed

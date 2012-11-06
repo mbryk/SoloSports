@@ -1,4 +1,5 @@
-<?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Restore");
+<div class="mid-well">
+    <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Restore");
 $this->breadcrumbs=array(
 	UserModule::t("Login") => array('/user/login'),
 	UserModule::t("Restore"),
@@ -21,7 +22,7 @@ $this->breadcrumbs=array(
 	<div class="row">
 		<?php echo CHtml::activeLabel($form,'login_or_email'); ?>
 		<?php echo CHtml::activeTextField($form,'login_or_email') ?>
-		<p class="hint"><?php echo UserModule::t("Please enter your login or email addres."); ?></p>
+		<p class="hint"><?php echo UserModule::t("Please enter your login or email address."); ?></p>
 	</div>
 	
 	<div class="row submit">
@@ -31,3 +32,4 @@ $this->breadcrumbs=array(
 <?php echo CHtml::endForm(); ?>
 </div><!-- form -->
 <?php endif; ?>
+</div>

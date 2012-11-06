@@ -53,7 +53,7 @@
   </li>
   <li class="span2">
     <a href="#" class="thumbnail">
-      <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/TaosCliffSkiing.jpg" class="info-pic" alt="">
+      <img src="http://www.ski-nyc.com/images/resorts/taos/TaosCliffSkiing.jpg" class="info-pic" alt="">
     </a>
   </li>
 
@@ -61,16 +61,16 @@
 </div>
 
     <div class="clear"></div>
-    <div class="navbar">
+<div class="navbar">
   <div class="navbar-inner">
     <ul class="nav">
-        <li class="active"><a href="<?php echo Yii::app()->createUrl('main/index') ?>">Sports</a></li>
-      <li class="dropdown">
+        <li><a href="<?php echo Yii::app()->createUrl('main/index') ?>">Sports</a></li>
+      <li class="dropdown active">
           <a href="<?php echo Yii::app()->createUrl('main/trips') ?>" class="dropdown-toggle" data-toggle="dropdown">Trips
               <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-              <li><a href="/main/trips#manage">Manage Trips</a></li>
+              <li><a href="/main/trips#manage" class="navbar-text">Manage Trips</a></li>
               <li><a href="/main/trips#create">Create a Trip</a></li>
           </ul>
       </li>      
@@ -80,26 +80,34 @@
     </ul>
   </div>
 </div> 
-    
-    
-    <div id="sports-page">
-    
-    <ul class="thumbnails">
-        <li>
-    <a href="#" class="thumbnail"><!-- link to quiz....-->
-      <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/ski_label.jpg" class="sport<?php echo $imgClass[0] ?>" alt="">
-    </a>
-  </li>
-  <li>
-    <a href="#" class="thumbnail">
-      <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/tennis_label.jpg" class="sport<?php echo $imgClass[1] ?>" alt="">
-    </a>
-  </li>
-  <li>
-    <a href="#" class="thumbnail">
-      <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/golf_label.jpeg" class="sport<?php echo $imgClass[2] ?>" alt="">
-    </a>
-  </li>
-    </ul>
-        </div>
+
+    <div>   
+      <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Second Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Third Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+              </div>
+    </div>
 </div>
