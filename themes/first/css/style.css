@@ -591,16 +591,16 @@ form input#mc-embedded-subscribe {
 #sports-page li{
     width:270px;
 }
-img.sport-no{
+img.sportstatus-0{
     opacity:.3;
     width:270px;
     height:200px;
 }
-img.sport-yes{
+img.sportstatus-2{
     width:270px;
     height:200px;
 }
-img.sport-inc{
+img.sportstatus-1{
     opacity: .5;
     width: 270px;
     height:200px;

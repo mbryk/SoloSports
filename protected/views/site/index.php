@@ -54,12 +54,12 @@
       <!-- Example row of columns -->
       <div class="row" id="sport-labels">
         <div class="span4"><!-- modal to login/take quiz as guest/learn more-->
-            <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/ski_label.jpg"/></a>
+            <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/ski_label.jpg"/>
         </div>
         <div class="span4">
-          <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/tennis_label.jpg"/></a>
+          <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/tennis_label.jpg"/>
        </div>
         <div class="span4">
-          <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/golf_label.jpeg"/></a>
+          <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/golf_label.jpg"/>
         </div>
       </div>

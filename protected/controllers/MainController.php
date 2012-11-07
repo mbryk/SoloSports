@@ -4,11 +4,28 @@ class MainController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index', array(
+            if(isset($_POST['quizit'])){
+                $sport = key($_POST['quizit']);
+                $user = Yii::app()->getModule('user')->user();
+                
+                switch($sport):
+                    case 'ski': $user->status_ski = $_POST['quizit'][$sport]; break;
+                    case 'tennis': $user->status_tennis = $_POST['quizit'][$sport]; break;
+                    case 'golf': $user->status_golf = $_POST['quizit'][$sport]; break;
+                endswitch;
+                $user->save();
+                if($_POST['quizit'][$sport] == 2)
+                    $this->redirect(array('connect/'.$sport));
+            }
+            
+            $this->render('index', array(
                     'imgClass'=>array(
-                        array('ski', '-inc'),
-                        array('tennis', '-inc'),
-                        array('golf', '-yes'),
+                        /*'ski'=>$user->status_ski,
+                        'tennis'=>$user->status_tennis,
+                        'golf'=>$user->status_golf,*/
+                        'ski'=>2,
+                        'tennis'=>0,
+                        'golf'=>1,
                         )
                     )
                 );
@@ -16,6 +33,10 @@ class MainController extends Controller
 	public function actionTrips()
 	{
 		$this->render('trips');
+	}
+	public function actionBio()
+	{
+		$this->render('bio');
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -37,22 +37,22 @@
       <ul class="thumbnails">
 
   <li class="span2">
-    <a href="#" class="thumbnail">
+    <a href="<?php echo Yii::app()->createUrl('main/bio') ?>" class="thumbnail">
       <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/male2.png" class="info-pic" alt="">
     </a>
   </li>
   <li class="span2">
-    <a href="#" class="thumbnail">
+    <a href="<?php echo Yii::app()->createUrl('main/bio') ?>" class="thumbnail">
       <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/age.png" class="info-pic" alt="">
     </a>
   </li>
   <li class="span2">
-    <a href="#" class="thumbnail">
+    <a href="<?php echo Yii::app()->createUrl('main/bio') ?>" class="thumbnail">
       <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/expert.png" class="info-pic" alt="">
     </a>
   </li>
   <li class="span2">
-    <a href="#" class="thumbnail">
+    <a href="<?php echo Yii::app()->createUrl('main/bio') ?>" class="thumbnail">
       <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/TaosCliffSkiing.jpg" class="info-pic" alt="">
     </a>
   </li>
@@ -86,11 +86,11 @@
     
     <ul class="thumbnails">
         
-        <?php foreach($imgClass as $i=> $sport): ?>
+        <?php foreach($imgClass as $sport=> $status): ?>
         <li>
-    <a href="#sModal<?php echo $i ?>" data-toggle="modal" class="thumbnail"><!-- modal to quiz....-->
-      <img src="<?php echo Yii::app()->theme->baseUrl.'/css/imgs/'.$sport[0].'_label.jpg' ?>" class="sport<?php echo $sport[1] ?>">
-      <?php if($sport[1]=='-inc'): ?>
+    <a href="#sModal-<?php echo $sport ?>" data-toggle="modal" class="thumbnail"><!-- modal to quiz....-->
+      <img src="<?php echo Yii::app()->theme->baseUrl.'/css/imgs/'.$sport.'_label.jpg' ?>" class="sportstatus-<?php echo $status ?>">
+      <?php if($status==1): ?>
       <div style="position:relative">
           <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/hp_in_progress.png" class="sport-in-progress" >
       </div>
@@ -98,11 +98,11 @@
     </a>
   </li>
   
-  
-  <div id="sModal<?php echo $i; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      
-      <?php switch($sport[1]): 
-          case '-yes': ?>
+  <div id="sModal-<?php echo $sport; ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <?php $this->beginWidget('CActiveForm'); ?>
+
+      <?php switch($status): 
+          case 2: ?>
       
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -112,31 +112,51 @@
     <p>You've finished registering for this sport.</p>
     <p>Now go and find yourself some matchups!</p>
   </div>      
-    
-      <?php break; case '-inc': ?>
+     <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Ok</button>
+  </div> 
+      
+      <?php break; case 1: ?>
+      
+      
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Almost there</h3>
   </div>
   <div class="modal-body">
-    <p>Thanks for signing up.</p>
+    <p>Thanks for signing up for the <?php echo $sport?> database.</p>
     <p>Click here to take the quiz and get yourself rated and into the mix!</p>
   </div>      
-      <?php break; case '-no': ?>
+    <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button type="submit" class="btn btn-primary btn-large" name="quizit[<?php echo $sport ?>]" value="2">Take the Quiz<i class="icon-chevron-right icon-white"></i></button>
+  </div>    
+      
+      <?php break; case 0: ?>
+      
+      
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Not yet registered</h3>
   </div>
   <div class="modal-body">
-    <p>Loading...</p>
+    <p>Our database tells us that you are not a <?php echo ($sport=='tennis')?'tennis player':$sport.'er'; ?></p>
+    <p>So... are you?</p>
+    <p>Here are your options:</p>
+  </div>  
+  <div class="modal-footer">
+      <button type="submit" class="btn btn-primary btn-large" name="quizit[<?php echo $sport ?>]" value="2">Take the Quiz<i class="icon-chevron-right icon-white"></i></button>
+    <button type="submit" class="btn" name="quizit[<?php echo $sport ?>]" value="1">Quiz Later</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Never mind</button>
+
   </div>      
 <?php      endswitch; ?>
 
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Ok</button>
-  </div>
+        <?php $this->endWidget(); ?>
+
 </div>
+  
         <?php endforeach; ?>
     </ul>
         </div>
