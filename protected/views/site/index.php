@@ -1,6 +1,6 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-          <img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/skier1.png" width="400" height="300" style="position: absolute;top:-5%;left:20%"/> 
+          <div style="position:relative"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/skier1.png" width="400" height="300" style="position: absolute;top:-160px;left:-70px"/> </div>
         <h1>This could be YOU!</h1>
         <p>SoloSports is a platform to help Athletes in Sports which are simply better played in Groups. </p>
         <p>Just fill out a <b>quick</b> and innovatively <b>visual</b> survey of your talent, and see who the <b>algorithm</b> spits out!</p>

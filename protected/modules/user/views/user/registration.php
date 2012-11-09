@@ -80,7 +80,7 @@ $this->breadcrumbs=array(
 	<div class="row">
 		<?php echo $form->labelEx($model,'verifyCode'); ?>
 		
-		<?php $this->widget('CCaptcha'); ?>
+		<?php $this->widget('CCaptcha', array('buttonOptions' => array('style' => 'display:block'))); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		<?php echo $form->error($model,'verifyCode'); ?>
 		

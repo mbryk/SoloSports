@@ -17,8 +17,8 @@ body {
     margin:0;
     padding:0;
     height:100%;
-    
-    position:relative;
+    position:absolute;
+    width:100%;
 }
 .main-container {
     padding:60px 0;   /* Height of the footer */

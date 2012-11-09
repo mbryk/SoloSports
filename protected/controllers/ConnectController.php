@@ -6,4 +6,16 @@ class ConnectController extends Controller
 	{
 		$this->render('index');
 	}
+	public function actionSki()
+	{
+		$this->render('ski');
+	}
+	public function actionTennis()
+	{
+		$this->render('tennis');
+	}
+	public function actionGolf()
+	{
+		$this->render('golf');
+	}
 }

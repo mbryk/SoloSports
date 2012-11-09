@@ -39,7 +39,7 @@ $this->breadcrumbs=array(
 	
 	<div class="row rememberMe">
 		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
+		<?php echo CHtml::activeLabelEx($model,'rememberMe', array('style'=>'display:inline-block')); ?>
 	</div>
 
 	<div class="row submit">

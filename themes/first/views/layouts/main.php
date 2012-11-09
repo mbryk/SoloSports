@@ -38,16 +38,7 @@
   </head>
 
 <body>
-    <?php if(1) echo '<!--' ?>
-    <div id="header" class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="http://solosports.markbryk.in/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="135"></a>
-          </div>
-      </div>
-    </div>
-    
-    <?php if(1) echo '-->' ?>
+    <div style="min-height: 100%;position:relative">
     
     <div class="container main-container">
         <?php echo $content ?>
@@ -72,5 +63,7 @@
     </div> 
     
 </div>
+    
+    </div>
   </body>
 </html>
