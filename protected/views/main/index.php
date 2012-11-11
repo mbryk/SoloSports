@@ -1,3 +1,4 @@
+<h1 class="title">Profile</h1>
 <div class="mid-well">
 
       <div style="float:left; width:30%">
@@ -66,7 +67,7 @@
     <ul class="nav">
         <li class="active"><a href="<?php echo Yii::app()->createUrl('main/index') ?>">Sports</a></li>
       <li class="dropdown">
-          <a href="<?php echo Yii::app()->createUrl('main/trips') ?>" class="dropdown-toggle" data-toggle="dropdown">Trips
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trips
               <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
@@ -83,7 +84,7 @@
     
     
     <div id="sports-page">
-    
+
     <ul class="thumbnails">
         
         <?php foreach($imgClass as $sport=> $status): ?>

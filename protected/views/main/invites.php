@@ -66,7 +66,7 @@
   <div class="navbar-inner">
     <ul class="nav">
         <li><a href="<?php echo Yii::app()->createUrl('main/index') ?>">Sports</a></li>
-      <li class="dropdown active">
+      <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trips
               <b class="caret"></b>
           </a>
@@ -75,40 +75,9 @@
               <li><a href="/main/trips#create">Create a Trip</a></li>
           </ul>
       </li>      
-      <li><a href="<?php echo Yii::app()->createUrl('main/invites') ?>">Invites</a></li>
+      <li class="active"><a href="<?php echo Yii::app()->createUrl('main/invites') ?>">Invites</a></li>
       <li><a href="<?php echo Yii::app()->createUrl('main/bio') ?>">Bio</a></li>
       <li><a href="<?php echo Yii::app()->createUrl('main/settings') ?>">Settings</a></li>
     </ul>
   </div>
 </div> 
-
-    <div id="trips-page">   
-      <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-              </div>
-    </div>
-</div>

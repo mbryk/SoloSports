@@ -40,7 +40,7 @@
 <body>
     <div style="min-height: 100%;position:relative">
     
-    <div class="container main-container">
+    <div class="container main-container" <?php if($this->getUniqueId()=='site' && $this->action->Id=='index'): ?> style="padding-top:60px" <?php endif; ?>>
         <?php echo $content ?>
     </div> <!-- /container -->
     

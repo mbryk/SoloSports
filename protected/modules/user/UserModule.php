@@ -238,4 +238,65 @@ class UserModule extends CWebModule
 	public function users() {
 		return User;
 	}
+        
+        public function getPrimarySport($id = 0) {
+            if ($id) 
+                $user = User::model()->active()->findbyPk($id);
+            else {
+                if(Yii::app()->user->isGuest) {
+                    return false;
+                } else {
+                    if (!self::$_user)
+                        self::$_user = User::model()->active()->findbyPk(Yii::app()->user->id);
+                    $user = self::$_user;
+                }
+            }
+            return $user->sports[0];
+        }
+        public function setPrimarySport($set, $id = 0){
+            if ($id) 
+                $user = User::model()->active()->findbyPk($id);
+            else {
+                if(Yii::app()->user->isGuest) {
+                    return false;
+                } else {
+                    if (!self::$_user)
+                        self::$_user = User::model()->active()->findbyPk(Yii::app()->user->id);
+                    $user = self::$_user;
+                }
+            }
+            $user->sports[0]=$set;
+        }
+        public function getSportStatus($sport=1, $id=0) {
+            if ($id) 
+                $user = User::model()->active()->findbyPk($id);
+            else {
+                if(Yii::app()->user->isGuest) {
+                    return false;
+                } else {
+                    if (!self::$_user)
+                        self::$_user = User::model()->active()->findbyPk(Yii::app()->user->id);
+                    $user = self::$_user;
+                }
+            }
+            
+            return $user->sports[$sport];
+        }
+        public function setSportStatus($set, $sport=1, $id=0){
+            if ($id) 
+                $user = User::model()->active()->findbyPk($id);
+            else {
+                if(Yii::app()->user->isGuest) {
+                    return false;
+                } else {
+                    if (!self::$_user)
+                        self::$_user = User::model()->active()->findbyPk(Yii::app()->user->id);
+                    $user = self::$_user;
+                }
+            }
+            $string = $user->sports;
+            $string[$sport] = $set;
+            $user->sports=$string;
+            $user->save();
+        }
 }

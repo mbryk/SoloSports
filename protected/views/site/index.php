@@ -12,7 +12,7 @@
 	
         
 
-<div id="subscribeFormWelcome"><span style="color:#696969;"><span style="font-size: 18px; ">To join our Beta Database, sign up here!</span></span>
+<div id="subscribeFormWelcome"><span style="font-size: 18px; color:#C7AEAE;">To join our Beta Database, sign up here!</span>
 </div>
 
 

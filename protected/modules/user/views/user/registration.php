@@ -1,11 +1,11 @@
+<h1 class="title">Register</h1>
+
 <div class="mid-well">
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
 $this->breadcrumbs=array(
 	UserModule::t("Registration"),
 );
 ?>
-
-<h1><?php echo UserModule::t("Registration"); ?></h1>
 
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
 <div class="success">

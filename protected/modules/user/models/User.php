@@ -17,6 +17,7 @@ class User extends CActiveRecord
 	 * @var integer $lastvisit
 	 * @var integer $superuser
 	 * @var integer $status
+         * @var string $sports
 	 */
 
 	/**
@@ -95,6 +96,7 @@ class User extends CActiveRecord
 			'lastvisit' => UserModule::t("Last visit"),
 			'superuser' => UserModule::t("Superuser"),
 			'status' => UserModule::t("Status"),
+			'sports' => UserModule::t("Sports"),
 		);
 	}
 	
@@ -122,7 +124,7 @@ class User extends CActiveRecord
 	public function defaultScope()
     {
         return array(
-            'select' => 'id, username, email, createtime, lastvisit, superuser, status',
+            'select' => 'id, username, email, createtime, lastvisit, superuser, status, sports',
         );
     }
 	
