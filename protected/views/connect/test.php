@@ -7,6 +7,7 @@
 ));
 ?>
     
+    
     <table class="table">
         <tr>
             <td><label>Rate Yourself on Moguls</label></td>
@@ -42,10 +43,8 @@
                 'allowEmpty'=>false,
                 )); ?>
             </td>
-    </table> 
-    
+    </table>    
 <?php 
-echo CHtml::submitButton("Back to Step 1",array('name'=>'step1'));
-echo CHtml::submitButton("Finish",array('name'=>'finish'));
+echo CHtml::submitButton("Finish",array('name'=>'test'));
 $this->endWidget(); ?>
 </div>

@@ -7,10 +7,11 @@
  */
 class SkiQuiz extends CFormModel
 {
-	public $name;
-	public $email;
-	public $subject;
-	public $body;
+	public $length;
+	public $type;
+	public $moguls;
+	public $terrain;
+	public $talent;
 
 	/**
 	 * Declares the validation rules.
@@ -18,11 +19,8 @@ class SkiQuiz extends CFormModel
 	public function rules()
 	{
 		return array(
-			// name, email, subject and body are required
-			array('name, subject, body', 'length', 'max' => 60),
-			// email has to be a valid email address
-			array('email', 'email'),
-			// verifyCode needs to be entered correctly
+                        array('length, type', 'required'),
+                        array('moguls, terrain, talent', 'required', 'on'=>'finish'),
 		);
 	}
 
@@ -34,10 +32,6 @@ class SkiQuiz extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-                    'name'=>'Name',
-                    'email'=>'Email',
-                    'subject'=>'Subject',
-                    'body'=>'Body',
 		);
 	}
 }

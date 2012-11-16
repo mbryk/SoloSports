@@ -2,9 +2,13 @@
 
 class ConnectController extends Controller
 {
-	public function actionIndex()
+	public function actionTest()
 	{
-		$this->render('index');
+            $model = new SkiQuiz();
+            if(isset($_POST['finish'])){
+                var_dump($_POST);
+            }
+            $this->render('test', array('model'=>$model));
 	}
 	public function actionSki()
 	{
