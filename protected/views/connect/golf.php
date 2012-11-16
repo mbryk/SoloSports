@@ -1,3 +1,4 @@
+<h1 class="title">Quiz</h1>
 <script type="text/javascript">var pageLoadStart = new Date();</script>
 <div id="quiz" class="mid-well">
     <div id="quiz-container">

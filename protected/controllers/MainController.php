@@ -2,7 +2,30 @@
 
 class MainController extends Controller
 {
-	public function actionIndex()
+	/* public function filters()
+	{
+		return array(
+			'accessControl' // required to enable accessRules
+		);
+	}
+
+	public function accessRules()
+	{
+		return array(
+			/*array('allow',
+				'actions' => array('signup'),
+				'users' => array('*'),
+			),
+			array('allow',
+				'roles' => array('user')
+			),
+			array('deny', // deny everybody else
+				'users' => array('*')
+			)
+		);
+	}*/
+        
+        public function actionIndex()
 	{
             if(isset($_POST['quizit'])){
                 $sport = key($_POST['quizit']);

@@ -1,3 +1,4 @@
+<h1 class="title">Quiz</h1>
 <script type="text/javascript">var pageLoadStart = new Date();</script>
 <div id="quiz" class="mid-well">
     <div id="quiz-container">
@@ -207,11 +208,6 @@ var VDNA_userID = '53730fb4-73f5-102f-b9af-001ec9d50ffe';
         /**
          * Google Analytics Async
          */
-             (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
         $('#f').append($('<img src="http://resources-ms-ak.visualdna.com/personality.visualdna.com/live/20110512110219/images/quiz/load.gif" alt="loading..." class="loading0" />'));
     });
     

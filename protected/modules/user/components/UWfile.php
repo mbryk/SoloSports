@@ -32,6 +32,7 @@ class UWfile {
 					'tooSmall'=>'',
 					'types'=>'',
 					'wrongType'=>'',
+                                        'safe'=>array('true','false'),
 				),
 			),
 		);
