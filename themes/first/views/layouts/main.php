@@ -12,8 +12,16 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/extra.css" type="text/css" media="screen, projection" />
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/main.js"></script>
     <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
-
-
+    <?php if($this->getUniqueId()=='connect'):
+        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/jquery.rating.css');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.rating.js');
+        ?>
+    <script>
+        $(window).load(function() {
+            $('.ratings > input').rating({'required':true});
+        });
+    </script>
+    <?php endif; ?>
     
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">

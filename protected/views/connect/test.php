@@ -6,42 +6,25 @@
     'stateful'=>true,
 ));
 ?>
-    
+    <div class="steps steps-striped active">
+            <div id="SkiQuiz_length">
+                        <input id="SkiQuiz_length" value="1" type="radio" name="SkiQuiz[terrain]" style="float:left" />
+        <div class="bar" style="width:23%;float:left"></div>
+                <input id="SkiQuiz_length" value="2" type="radio" name="SkiQuiz[terrain]" style="float:left" />
+        <div class="bar" style="width:23%;float:left"></div>
+                <input id="SkiQuiz_length" value="3" type="radio" name="SkiQuiz[terrain]" style="float:left" />
+        <div class="bar" style="width:23%;float:left"></div>
+                <input id="SkiQuiz_length" value="4" type="radio" name="SkiQuiz[terrain]" style="float:left" />
+        <div class="bar" style="width:23%;float:left"></div>
+                <input id="SkiQuiz_length" value="5" type="radio" name="SkiQuiz[terrain]" style="float:left" />
+        </div>
+        
+    </div>
     
     <table class="table">
         <tr>
-            <td><label>Rate Yourself on Moguls</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'moguls',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
-            </td>
-        </tr>
-        <tr>
-            <td><label>Rate Yourself in Terrain Parks</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'terrain',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
-            </td>
-        <tr>
             <td><label>Rate Yourself in General</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'talent',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
+            <td>
             </td>
     </table>    
 <?php 

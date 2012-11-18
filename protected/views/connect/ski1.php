@@ -8,8 +8,21 @@
     <table class="table">
         <tr>
             <td><label>How long have you been skiing for?</label></td>
-            <td><?php echo $form->textField($model,'length',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'length'); ?>
+            <td>
+    <div class="steps steps-striped active">
+            <div id="SkiQuiz_length" class="ratings">
+                        <input id="SkiQuiz_length" value="1" type="radio" name="SkiQuiz[length]" style="float:left" />
+        <div class="bar" style="width:20%;float:left"></div>
+                <input id="SkiQuiz_length" value="2" type="radio" name="SkiQuiz[length]" style="float:left" />
+        <div class="bar" style="width:20%;float:left"></div>
+                <input id="SkiQuiz_length" value="3" type="radio" name="SkiQuiz[length]" style="float:left" />
+        <div class="bar" style="width:20%;float:left"></div>
+                <input id="SkiQuiz_length" value="4" type="radio" name="SkiQuiz[length]" style="float:left" />
+        <div class="bar" style="width:20%;float:left"></div>
+                <input id="SkiQuiz_length" value="5" type="radio" name="SkiQuiz[length]" style="float:left" />
+        </div>
+        
+    </div>
             </td>
         </tr>
         <tr>

@@ -10,37 +10,36 @@
     <table class="table">
         <tr>
             <td><label>Rate Yourself on Moguls</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'moguls',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
+            <td>
+<span id="SkiQuiz_moguls" class="ratings">
+<input id="SkiQuiz_moguls_0" value="1" type="radio" name="SkiQuiz[moguls]" />
+<input id="SkiQuiz_moguls_1" value="2" type="radio" name="SkiQuiz[moguls]" />
+<input id="SkiQuiz_moguls_2" value="3" type="radio" name="SkiQuiz[moguls]" />
+<input id="SkiQuiz_moguls_3" value="4" type="radio" name="SkiQuiz[moguls]" />
+<input id="SkiQuiz_moguls_4" value="5" type="radio" name="SkiQuiz[moguls]" />
+</span>
             </td>
         </tr>
         <tr>
             <td><label>Rate Yourself in Terrain Parks</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'terrain',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
+            <td><span id="SkiQuiz_terrain" class="ratings">
+<input id="SkiQuiz_terrain_0" value="1" type="radio" name="SkiQuiz[terrain]" />
+<input id="SkiQuiz_terrain_1" value="2" type="radio" name="SkiQuiz[terrain]" />
+<input id="SkiQuiz_terrain_2" value="3" type="radio" name="SkiQuiz[terrain]" />
+<input id="SkiQuiz_terrain_3" value="4" type="radio" name="SkiQuiz[terrain]" />
+<input id="SkiQuiz_terrain_4" value="5" type="radio" name="SkiQuiz[terrain]" />
+</span>
             </td>
         <tr>
             <td><label>Rate Yourself in General</label></td>
-            <td><?php $this->widget('CStarRating',array(
-                'model'=>$model,
-                'attribute'=>'talent',
-                'minRating'=>1,
-                'maxRating'=>5,                          
-                'starCount'=>5,
-                'allowEmpty'=>false,
-                )); ?>
+            <td>
+<span id="SkiQuiz_talent" class="ratings">
+<input id="SkiQuiz_talent_0" value="1" type="radio" name="SkiQuiz[talent]" />
+<input id="SkiQuiz_talent_1" value="2" type="radio" name="SkiQuiz[talent]" />
+<input id="SkiQuiz_talent_2" value="3" type="radio" name="SkiQuiz[talent]" />
+<input id="SkiQuiz_talent_3" value="4" type="radio" name="SkiQuiz[talent]" />
+<input id="SkiQuiz_talent_4" value="5" type="radio" name="SkiQuiz[talent]" />
+</span>                
             </td>
     </table> 
     
@@ -48,4 +47,5 @@
 echo CHtml::submitButton("Back to Step 1",array('name'=>'step1'));
 echo CHtml::submitButton("Finish",array('name'=>'finish'));
 $this->endWidget(); ?>
+
 </div>
