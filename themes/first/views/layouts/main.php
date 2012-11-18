@@ -13,8 +13,8 @@
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/main.js"></script>
     <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
     <?php if($this->getUniqueId()=='connect'):
-        Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/jquery.rating.css');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery.rating.js');
+        //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/jquery.rating.css');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/steps.js');
         ?>
     <script>
         $(window).load(function() {

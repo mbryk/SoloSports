@@ -1,16 +1,3 @@
-/* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ */
-div.steps-rating-cancel,div.steps-star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
-div.steps-rating-cancel,div.steps-rating-cancel a{background:url(imgs/delete.gif) no-repeat 0 -16px}
-div.steps-star-rating,div.steps-star-rating a{background:url(imgs/star.gif) no-repeat 0 0px}
-div.steps-rating-cancel a,div.steps-star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0}
-div.steps-star-rating-on a{background-position:0 -16px!important}
-div.steps-star-rating-hover a{background-position:0 -32px}
-/* Read Only CSS */
-div.steps-star-rating-readonly a{cursor:default !important}
-/* Partial Star CSS */
-div.steps-star-rating{background:transparent!important;overflow:hidden!important}
-/* END jQuery.Rating Plugin CSS */
-
 @-webkit-keyframes steps-bar-stripes {
   from {
     background-position: 40px 0;
@@ -217,7 +204,50 @@ div.steps-star-rating{background:transparent!important;overflow:hidden!important
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+div.steps-off{
+    visibility: hidden;
+}
+div.steps-on{
+}
+div.steps-hover.bar{
+    background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(top, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+  background-color: #fbb450;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);  
+}
 
+/* jQuery.Rating Plugin CSS - http://www.fyneworks.com/jquery/star-rating/ */
+div.steps-rating-cancel,div.steps-star-rating{
+    float:left;
+    width:17px;
+    height:15px;
+    
+    cursor:pointer;
+    display:block;
+    background:blue;
+    overflow:hidden}
+div.steps-rating-cancel,div.steps-rating-cancel a{background:url(imgs/delete.gif) no-repeat 0 -16px}
+div.steps-star-rating,div.steps-star-rating a{background:url(imgs/star.gif) no-repeat 0 0px}
+div.steps-rating-cancel a,div.steps-star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0}
+div.steps-star-rating-on a{background-position:0 -16px!important}
+div.steps-star-rating-hover a{background-position:0 -32px}
+/* Read Only CSS */
+div.steps-star-rating-readonly a{cursor:default !important}
+/* Partial Star CSS */
+div.steps-star-rating{background:transparent!important;overflow:hidden!important}
+/* END jQuery.Rating Plugin CSS */
 
 #quiz .header-inner{
 	width:760px;

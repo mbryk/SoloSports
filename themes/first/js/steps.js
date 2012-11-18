@@ -47,8 +47,8 @@
 		
 		// loop through each matched element
 		this
-		 .not('.star-rating-applied')
-			.addClass('star-rating-applied')
+		 .not('.steps-star-rating-applied')
+			.addClass('steps-star-rating-applied')
 		.each(function(){
 			
 			// Load control parameters / find context / etc
@@ -84,7 +84,7 @@
 				control.serial = raters.count++;
 				
 				// create rating element
-				rater = $('<span class="star-rating-control"/>');
+				rater = $('<span class="steps-star-rating-control"/>');
 				input.before(rater);
 				
 				// Mark element for initialization (once all stars are ready)
@@ -98,12 +98,12 @@
 					control.cancel = $('<div class="rating-cancel"><a title="' + control.cancel + '">' + control.cancelValue + '</a></div>')
 					.mouseover(function(){
 						$(this).rating('drain');
-						$(this).addClass('star-rating-hover');
+						$(this).addClass('steps-star-rating-hover');
 						//$(this).rating('focus');
 					})
 					.mouseout(function(){
 						$(this).rating('draw');
-						$(this).removeClass('star-rating-hover');
+						$(this).removeClass('steps-star-rating-hover');
 						//$(this).rating('blur');
 					})
 					.click(function(){
@@ -115,8 +115,11 @@
 			} // first element of group
 			
 			// insert rating star
-			var star = $('<div class="star-rating rater-'+ control.serial +'"><a title="' + (this.title || this.value) + '">' + this.value + '</a></div>');
+			var star = $('<div class="steps-star-rating rater-'+ control.serial +'"><a title="' + (this.title || this.value) + '">' + this.value + '</a></div>');
 			rater.append(star);
+                        var bar = $('<div class="bar steps-off" id="' + this.value + '" style="width:18%;float:left;"></div>');
+                        if(this.value != '5') rater.append(bar);
+                            
 			
 			// inherit attributes from input element
 			if(this.id) star.attr('id', this.id);
@@ -140,11 +143,11 @@
 			// readOnly?
 			if(control.readOnly)//{ //save a byte!
 				// Mark star as readOnly so user can customize display
-				star.addClass('star-rating-readonly');
+				star.addClass('steps-star-rating-readonly');
 			//}  //save a byte!
 			else//{ //save a byte!
 			 // Enable hover css effects
-				star.addClass('star-rating-live')
+				star.addClass('steps-star-rating-live')
 				 // Attach mouse events
 					.mouseover(function(){
 						$(this).rating('fill');
@@ -226,7 +229,8 @@
 			if(control.readOnly) return;
 			// Reset all stars and highlight them up to this element
 			this.rating('drain');
-			this.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('star-rating-hover');
+			this.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('steps-star-rating-hover');
+                        this.prevAll().andSelf().filter('.bar').removeClass('steps-on').removeClass('steps-off').addClass('steps-hover');
 		},// $.fn.rating.fill
 		
 		drain: function() { // drain all the stars.
@@ -234,7 +238,8 @@
 			// do not execute when control is in read-only mode
 			if(control.readOnly) return;
 			// Reset all stars
-			control.rater.children().filter('.rater-'+ control.serial).removeClass('star-rating-on').removeClass('star-rating-hover');
+			control.rater.children().filter('.rater-'+ control.serial).removeClass('steps-star-rating-on').removeClass('steps-star-rating-hover');
+                        control.rater.children().filter('.bar').removeClass('steps-on').removeClass('steps-hover').addClass('steps-off');
 		},// $.fn.rating.drain
 		
 		draw: function(){ // set value and stars to reflect current selection
@@ -244,14 +249,15 @@
 			// Set control value
 			if(control.current){
 				control.current.data('rating.input').attr('checked','checked');
-				control.current.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('star-rating-on');
+				control.current.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('steps-star-rating-on');
+                                control.current.prevAll().filter('.bar').removeClass('steps-off').removeClass('steps-hover').addClass('steps-on');
 			}
 			else
 			 $(control.inputs).removeAttr('checked');
 			// Show/hide 'cancel' button
 			control.cancel[control.readOnly || control.required?'hide':'show']();
 			// Add/remove read-only classes to remove hand pointer
-			this.siblings()[control.readOnly?'addClass':'removeClass']('star-rating-readonly');
+			this.siblings()[control.readOnly?'addClass':'removeClass']('steps-star-rating-readonly');
 		},// $.fn.rating.draw
 		
 		

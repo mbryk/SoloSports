@@ -11,14 +11,10 @@
             <td>
     <div class="steps steps-striped active">
             <div id="SkiQuiz_length" class="ratings">
-                        <input id="SkiQuiz_length" value="1" type="radio" name="SkiQuiz[length]" style="float:left" />
-        <div class="bar" style="width:20%;float:left"></div>
+                <input id="SkiQuiz_length" value="1" type="radio" name="SkiQuiz[length]" style="float:left" />
                 <input id="SkiQuiz_length" value="2" type="radio" name="SkiQuiz[length]" style="float:left" />
-        <div class="bar" style="width:20%;float:left"></div>
                 <input id="SkiQuiz_length" value="3" type="radio" name="SkiQuiz[length]" style="float:left" />
-        <div class="bar" style="width:20%;float:left"></div>
                 <input id="SkiQuiz_length" value="4" type="radio" name="SkiQuiz[length]" style="float:left" />
-        <div class="bar" style="width:20%;float:left"></div>
                 <input id="SkiQuiz_length" value="5" type="radio" name="SkiQuiz[length]" style="float:left" />
         </div>
         
