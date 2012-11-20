@@ -630,3 +630,6 @@ p.note{
     left:35%;position:absolute
     
 }
+#loginform td{
+    padding: 15px;
+}

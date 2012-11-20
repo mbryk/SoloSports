@@ -208,8 +208,10 @@ div.steps-off{
     visibility: hidden;
 }
 div.steps-on{
+    border-radius: 5px;
 }
 div.steps-hover.bar{
+    border-radius: 5px;
     background-color: #faa732;
   background-image: -moz-linear-gradient(top, #fbb450, #f89406);
   background-image: -ms-linear-gradient(top, #fbb450, #f89406);
@@ -232,17 +234,33 @@ div.steps-hover.bar{
 div.steps-rating-cancel,div.steps-star-rating{
     float:left;
     width:17px;
-    height:15px;
-    
+    height:3%;
+    text-indent: 5px;
     cursor:pointer;
     display:block;
-    background:blue;
     overflow:hidden}
 div.steps-rating-cancel,div.steps-rating-cancel a{background:url(imgs/delete.gif) no-repeat 0 -16px}
-div.steps-star-rating,div.steps-star-rating a{background:url(imgs/star.gif) no-repeat 0 0px}
-div.steps-rating-cancel a,div.steps-star-rating a{display:block;width:16px;height:100%;background-position:0 0px;border:0}
-div.steps-star-rating-on a{background-position:0 -16px!important}
-div.steps-star-rating-hover a{background-position:0 -32px}
+div.steps-star-rating,div.steps-star-rating a{
+    color:black;
+    background:url(imgs/circle_grey.png) no-repeat 0 0px;
+    text-decoration: none;
+    font-family: fantasy;
+}
+div.steps-rating-cancel a,div.steps-star-rating a{
+    display:block;
+    width:16px;
+    height:100%;
+    background-position:0 0px;
+    border:0
+}
+div.steps-star-rating-on a{
+    background:url(imgs/circle_blue.png) no-repeat 0 0px;
+    color:white;
+}
+div.steps-star-rating-hover a{
+    background:url(imgs/circle_orange.png) no-repeat 0 0px;
+    color:white;
+}
 /* Read Only CSS */
 div.steps-star-rating-readonly a{cursor:default !important}
 /* Partial Star CSS */

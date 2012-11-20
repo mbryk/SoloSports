@@ -42,10 +42,9 @@
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>	<div class="clear"><input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+	</div>	<div class="clear"><input type="submit" value="Get an Invite" name="subscribe" id="my-cool-button" class="button"></div>
 </form>
 </div>
-
 		    </div>
       
       

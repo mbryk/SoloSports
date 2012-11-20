@@ -17,39 +17,33 @@ $this->breadcrumbs=array(
 
 <?php endif; ?>
 
-<div class="form">
+<table class="form" id="loginform">
 <?php echo CHtml::beginForm(); ?>
 
 	<?php echo CHtml::errorSummary($model); ?>
+	<tr>
+		<td><?php echo CHtml::activeLabelEx($model,'username'); ?></td>
+		<td><?php echo CHtml::activeTextField($model,'username') ?></td>
+        </tr>
+	<tr>
+		<td><?php echo CHtml::activeLabelEx($model,'password'); ?></td>
+		<td><?php echo CHtml::activePasswordField($model,'password') ?></td>
+        </tr>
+        
+        <tr>
+            <td><?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?></td>
+        </tr>
+        <tr>
+            <td><?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
+		<?php echo CHtml::activeLabelEx($model,'rememberMe', array('style'=>'display:inline-block')); ?></td>
+        </tr>
+</table>	
 	
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'username'); ?>
-		<?php echo CHtml::activeTextField($model,'username') ?>
-	</div>
-	
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'password'); ?>
-		<?php echo CHtml::activePasswordField($model,'password') ?>
-	</div>
-	
-	<div class="row">
-		<p class="hint">
-		<!--<?php echo CHtml::link(UserModule::t("Register"),Yii::app()->getModule('user')->registrationUrl); ?> | -->
-                    <?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?>
-		</p>
-	</div>
-	
-	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model,'rememberMe', array('style'=>'display:inline-block')); ?>
-	</div>
-
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Login")); ?>
+	<div class="row submit" style="position:relative">
+		<?php echo CHtml::submitButton(UserModule::t("Login"), array('id'=>'my-cool-button', 'style'=>'position:absolute; right:0')); ?>
 	</div>
 	
 <?php echo CHtml::endForm(); ?>
-</div><!-- form -->
 
 
 <?php

@@ -9,19 +9,31 @@
     <link rel="icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/imgs/clear_cool.ico" type="image/x-icon" />    
 
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/extra.css" type="text/css" media="screen, projection" />
     <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl ?>/js/main.js"></script>
-    <?php Yii::app()->clientScript->registerCoreScript( 'jquery' ) ?>
-    <?php if($this->getUniqueId()=='connect'):
-        //Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/jquery.rating.css');
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/steps.js');
-        ?>
-    <script>
-        $(window).load(function() {
-            $('.ratings > input').rating({'required':true});
-        });
-    </script>
-    <?php endif; ?>
+    <?php Yii::app()->clientScript->registerCoreScript( 'jquery' );
+    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/cool_button.css');?>
+    
+    <?php switch($this->getUniqueId()):
+        case('site'):
+            Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/mce.js');
+            break;
+        case('connect'):
+            if(0):
+                Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/extra.css');
+                Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/steps.js');?>
+                <script>
+                    $(window).load(function() {
+                        $('.ratings > input').rating({'required':true});
+                    });
+                </script>
+            <?php endif; 
+            Yii::app()->clientScript->registerScriptFile("//ajax.googleapis.com/ajax/libs/mootools/1.1.1/mootools-yui-compressed.js");
+            Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/mootools.js');
+            Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/extra2.css');
+            break;
+        default:
+            break;
+    endswitch;?>
     
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">

@@ -6,32 +6,33 @@
     'stateful'=>true,
 ));
 ?>
-    
-    <table class="table">
+    <h1 style="text-align: center;">Rate Yourself...</h1>
+    <table class="table" style="width:100%">
         <tr>
-            <td><label>Rate Yourself on Moguls</label></td>
+            <td><label>...on Moguls</label></td>
             <td>
-<span id="SkiQuiz_moguls" class="ratings">
-<input id="SkiQuiz_moguls_0" value="1" type="radio" name="SkiQuiz[moguls]" />
-<input id="SkiQuiz_moguls_1" value="2" type="radio" name="SkiQuiz[moguls]" />
-<input id="SkiQuiz_moguls_2" value="3" type="radio" name="SkiQuiz[moguls]" />
-<input id="SkiQuiz_moguls_3" value="4" type="radio" name="SkiQuiz[moguls]" />
-<input id="SkiQuiz_moguls_4" value="5" type="radio" name="SkiQuiz[moguls]" />
-</span>
+<div id="slider" class="slider">
+  <div class="knob"></div>
+</div>
+<div id="fontSize">Change the value, to change the fontsize.</div>
+                
+
             </td>
         </tr>
         <tr>
-            <td><label>Rate Yourself in Terrain Parks</label></td>
-            <td><span id="SkiQuiz_terrain" class="ratings">
-<input id="SkiQuiz_terrain_0" value="1" type="radio" name="SkiQuiz[terrain]" />
-<input id="SkiQuiz_terrain_1" value="2" type="radio" name="SkiQuiz[terrain]" />
-<input id="SkiQuiz_terrain_2" value="3" type="radio" name="SkiQuiz[terrain]" />
-<input id="SkiQuiz_terrain_3" value="4" type="radio" name="SkiQuiz[terrain]" />
-<input id="SkiQuiz_terrain_4" value="5" type="radio" name="SkiQuiz[terrain]" />
-</span>
+            <td><label>...in Terrain Parks</label></td>
+            <td>
+            <?php $this->widget('CStarRating', array(
+                    'model'=>$model,
+                    'attribute'=>'terrain',
+                    'minRating'=>1,
+                    'maxRating'=>5,
+                    'starCount'=>5,
+                    'allowEmpty'=>false,
+                )); ?>
             </td>
         <tr>
-            <td><label>Rate Yourself in General</label></td>
+            <td><label>... in General</label></td>
             <td>
 <span id="SkiQuiz_talent" class="ratings">
 <input id="SkiQuiz_talent_0" value="1" type="radio" name="SkiQuiz[talent]" />

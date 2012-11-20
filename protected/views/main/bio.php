@@ -1,3 +1,4 @@
+<h1 class="title">Profile</h1>
 <div class="mid-well">
 
       <div style="float:left; width:30%">

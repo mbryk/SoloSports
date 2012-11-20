@@ -117,7 +117,7 @@
 			// insert rating star
 			var star = $('<div class="steps-star-rating rater-'+ control.serial +'"><a title="' + (this.title || this.value) + '">' + this.value + '</a></div>');
 			rater.append(star);
-                        var bar = $('<div class="bar steps-off" id="' + this.value + '" style="width:18%;float:left;"></div>');
+                        var bar = $('<div class="bar steps-off" id="' + this.value + '" style="width:19%;float:left;"></div>');
                         if(this.value != '5') rater.append(bar);
                             
 			
@@ -145,7 +145,7 @@
 				// Mark star as readOnly so user can customize display
 				star.addClass('steps-star-rating-readonly');
 			//}  //save a byte!
-			else//{ //save a byte!
+			else {//{ //save a byte!
 			 // Enable hover css effects
 				star.addClass('steps-star-rating-live')
 				 // Attach mouse events
@@ -161,6 +161,21 @@
 						$(this).rating('select');
 					})
 				;
+                                bar
+                                        .mouseover(function(){
+                                                console.log("hey!");
+						$(this).next('.rater-'+ control.serial).rating('fill');
+						$(this).next('.rater-'+ control.serial).rating('focus');
+					})
+					.mouseout(function(){
+						$(this).next('.rater-'+ control.serial).rating('draw');
+						$(this).next('.rater-'+ control.serial).rating('blur');
+					})
+                                        .click(function(){
+						$(this).next('.rater-'+ control.serial).rating('select');
+					})
+                                        ;
+                        }
 			//}; //save a byte!
 			
 			// set current selection
