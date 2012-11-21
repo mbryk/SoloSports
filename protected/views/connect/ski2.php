@@ -31,7 +31,7 @@
                     'allowEmpty'=>false,
                 )); ?>
             </td>
-        <tr>
+        </tr><tr>
             <td><label>... in General</label></td>
             <td>
 <span id="SkiQuiz_talent" class="ratings">
@@ -42,6 +42,7 @@
 <input id="SkiQuiz_talent_4" value="5" type="radio" name="SkiQuiz[talent]" />
 </span>                
             </td>
+        </tr>
     </table> 
     
 <?php 

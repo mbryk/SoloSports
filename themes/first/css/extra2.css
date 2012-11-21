@@ -1,15 +1,96 @@
+.quiz_question{
+    text-align: center;
+    height: 50px;
+    width: 760px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    position: relative;
+    left: -4px;
+    background: transparent url(http://resources-ms-ak.visualdna.com/personality.visualdna.com/live/20110512110219/images/quiz/statement-bg-760.png) top left no-repeat;
+}
+.quiz_question label{
+    text-align: center;
+}
+.quiz_choices{
+    list-style: none;
+    margin: 0 auto;
+}
+.quiz_choices li{
+    float:left;
+    display:inline;
+    text-align: center;
+    width:156px;
+    height:156px;
+}
+.quiz_choices li div{
+    position: relative;
+    float:left;
+    width:156px;
+    height:156px;
+}
+.quiz_choices li div div{
+    position: absolute;
+    background-color: #D66;
+    overflow: hidden;
+    top: 6px;
+    width: 140px;
+    height: 140px;
+    left: 6px;
+}
+.quiz_choices li div:hover div{
+    position: absolute;
+    background-color: #D66;
+    overflow: hidden;
+    top: 0;
+    width: 156px;
+    height: 156px;
+    left: 0;
+}
+
+.quiz_choices li a{
+    text-decoration: none;
+}
+
+.quiz_choices li a img {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    display: block;
+}
+
 .slider {
   background: #CCC;
   height: 16px;
   width: 200px;
 }
-  .slider .knob {
+.slider .knob {
     background: #000;
     width: 16px;
     height: 16px;
-  }
-
+}
+.bar .knob{
+    background: #000;
+    width: 16px;
+    height: 16px;
+}
 #fontSize {
   height: 50px;
   line-height: 50px;
+}
+#line {
+    position: absolute; /* allows to position it anywhere */
+    width: 3px; /* your chosen line width */
+    background-color: #06a; /* line color */
+    z-index: 1000; /* make sure this is above your other elements */
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    /* transform-origin sets rotation around top left (instead of the geometrical center) */
 }

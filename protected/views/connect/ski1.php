@@ -1,4 +1,4 @@
-<h1 class="title"> Ski </h1>
+<h1 class="title">Solo Skier </h1>
 <div class="mid-well">
 <?php $form=$this->beginWidget('CActiveForm', array(
     'enableAjaxValidation'=>false,
@@ -7,22 +7,16 @@
 )); ?>
     <table class="table">
         <tr>
-            <td><label>How long have you been skiing for?</label></td>
+            <td><label>What do you ride?</label></td>
             <td>
-    <div class="steps steps-striped active">
-            <div id="SkiQuiz_length" class="ratings">
-                <input id="SkiQuiz_length" value="1" type="radio" name="SkiQuiz[length]" style="float:left" />
-                <input id="SkiQuiz_length" value="2" type="radio" name="SkiQuiz[length]" style="float:left" />
-                <input id="SkiQuiz_length" value="3" type="radio" name="SkiQuiz[length]" style="float:left" />
-                <input id="SkiQuiz_length" value="4" type="radio" name="SkiQuiz[length]" style="float:left" />
-                <input id="SkiQuiz_length" value="5" type="radio" name="SkiQuiz[length]" style="float:left" />
-        </div>
-        
-    </div>
+                <div class="progress progress-striped active" id="slider2">
+                    <div class="bar" id="bar" style="width: 40%;"><div class="knob"></div></div>
+                    <input type="hidden" name="length" value="4">
+                </div>
             </td>
         </tr>
         <tr>
-            <td><label>What skiing do you most prefer?</label></td>
+            <td><label>What terrain do you ride?</label></td>
             <td><?php echo $form->textField($model,'type',array('size'=>60, 'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'type'); ?>
             </td>

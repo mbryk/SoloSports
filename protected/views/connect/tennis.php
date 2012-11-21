@@ -1,3 +1,5 @@
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/quiz.js');
+Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/extra.css');?>
 <h1 class="title">Quiz</h1>
 <script type="text/javascript">var pageLoadStart = new Date();</script>
 <div id="quiz" class="mid-well">
