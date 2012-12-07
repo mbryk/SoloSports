@@ -1,6 +1,6 @@
 <?php
 
-class ConnectController extends Controller
+class RankController extends Controller
 {
 	public function actionTest()
 	{

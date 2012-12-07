@@ -13,8 +13,15 @@
     text-align: center;
 }
 .quiz_choices{
-    list-style: none;
+    width: 760px;
+    height: 156px;
     margin: 0 auto;
+}
+.quiz_choices ul{
+    list-style: none;
+    width: 550px;
+    margin: 0 auto;
+    
 }
 .quiz_choices li{
     float:left;
@@ -22,6 +29,7 @@
     text-align: center;
     width:156px;
     height:156px;
+    padding: 0 10px;
 }
 .quiz_choices li div{
     position: relative;

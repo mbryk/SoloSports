@@ -18,7 +18,6 @@
 }
 
 body {
-    //background: url(imgs/pam-skinning.jpg) no-repeat center center fixed; 
     background: url(imgs/body-bg.jpg) top center no-repeat #011226;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -471,10 +470,12 @@ body {
 			background-color:#6f2828;
 		}
 		#templateContainer{
-			background-color:#6f2828;
+			//background-color:#6f2828;
 		}
 		#templateBody{
 			background-color:#c95454;
+                        opacity: .7;
+                        border-radius: 30px;
 		}
 		.bodyContent{
 			line-height:150%;
@@ -531,7 +532,8 @@ body {
 form input#mce-EMAIL, form input#mce-NAME, form select#mce-SPORT {
 	float: left;
 	font-family: 'proxima-nova', sans-serif;
-	font-size: 26px;
+	font-size: 25px;
+        margin-left: 50px;
 	padding: 0 0 0 13px;
 	width: 323px;
 	height: 63px;
@@ -542,7 +544,9 @@ form input#mce-EMAIL, form input#mce-NAME, form select#mce-SPORT {
 	border-radius: 7px;
 	margin-right: 8px;
 }
-
+form input#mce-EMAIL:hover, form input#mce-NAME:hover, form select#mce-SPORT:hover {
+    opacity:1 !important;
+}
 form input.mce-INPUT,#ForgotPasswordForm_email {
 	float: left;
 	font-family: 'proxima-nova', sans-serif;
