@@ -1,4 +1,16 @@
-      <!-- Main hero unit for a primary marketing message or call to action -->
+<?php if(Yii::app()->user->hasFlash('message')):?>
+<div class="alert alert-success" style="position:absolute; width:100%;top:0">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <p style="text-align:center"><?php echo Yii::app()->user->getFlash('message'); ?></p>
+</div>
+<?php
+Yii::app()->clientScript->registerScript(
+   'myHideEffect',
+   '$(".alert").animate({opacity: 1.0}, 3000).fadeOut("slow");',
+   CClientScript::POS_READY
+);
+endif;?>
+
       <div class="hero-unit">
           <div style="position:relative"><img src="<?php echo Yii::app()->theme->baseUrl ?>/css/imgs/skier1.png" width="400" height="300" style="position: absolute;top:-160px;left:-70px"/> </div>
         <h1>This could be YOU!</h1>

@@ -71,13 +71,13 @@
              <a class="brand" href="<?php echo Yii::app()->request->baseUrl ?>/"><img src="<?php echo Yii::app()->request->baseUrl ?>/imgs/logo.png" height="50"></a>
         </div>
         <div class="right-sec">
-            <a href="<?php echo Yii::app()->request->baseUrl ?>/">Home</a> |
-            <a href="<?php echo Yii::app()->createUrl('site/mission') ?> ">About</a> |  
-            <a href="<?php echo Yii::app()->createUrl('site/contact') ?>">Contact</a> | 
-            <?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Login"), Yii::app()->getModule('user')->loginUrl); ?>
-            <!--<?php if(Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Register"), Yii::app()->getModule('user')->registrationUrl); ?>-->
-            <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Profile"), Yii::app()->getModule('user')->profileUrl).' | '; ?>
-            <?php if(!Yii::app()->user->isGuest) echo CHtml::link(Yii::app()->getModule('user')->t("Logout").' ('.Yii::app()->user->name.')', Yii::app()->getModule('user')->logoutUrl); ?>
+            <a href="<?php echo Yii::app()->request->baseUrl ?>/" <?php if($this->getUniqueId()=='site' && $this->action->Id=='index') echo 'class="active"'?>>Home</a> |
+            <a href="<?php echo Yii::app()->createUrl('site/mission')?>" <?php if($this->action->Id=='mission') echo 'class="active"'?>>About</a> |  
+            <a href="<?php echo Yii::app()->createUrl('site/contact')?>" <?php if($this->action->Id=='contact') echo 'class="active"'?>>Contact</a> | 
+            <?php if(Yii::app()->user->isGuest) echo CHtml::link('Login', '/site/login'); ?>
+            <!--<?php if(Yii::app()->user->isGuest) echo CHtml::link('Register', '/site/register'); ?>-->
+            <?php if(!Yii::app()->user->isGuest) echo CHtml::link('profile', '/main', array('class'=> ($this->getUniqueId()=='main')?'active':'')).' | '; ?>
+            <?php if(!Yii::app()->user->isGuest) echo CHtml::link('Logout ('.Yii::app()->user->name.')', '/site/logout'); ?>
         </div>
         <div class="cleardiv"></div>
     </div> 

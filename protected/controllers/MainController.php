@@ -29,11 +29,11 @@ class MainController extends Controller
 	{
             if(isset($_POST['quizit'])){
                 $sport = key($_POST['quizit']);
-                switch($sport):
+                /*switch($sport):
                     case 'ski': Yii::app()->getModule('user')->setSportStatus($_POST['quizit'][$sport],1); break;
                     case 'tennis': Yii::app()->getModule('user')->setSportStatus($_POST['quizit'][$sport],2); break;
                     case 'golf': Yii::app()->getModule('user')->setSportStatus($_POST['quizit'][$sport],3); break;
-                endswitch;
+                endswitch;*/
                 
                 if($_POST['quizit'][$sport] == 2)
                     $this->redirect(array('connect/'.$sport));
@@ -41,9 +41,9 @@ class MainController extends Controller
             
             $this->render('index', array(
                     'imgClass'=>array(
-                        'ski'=> Yii::app()->getModule('user')->getSportStatus(1),
-                        'tennis'=>Yii::app()->getModule('user')->getSportStatus(2),
-                        'golf'=>Yii::app()->getModule('user')->getSportStatus(3),
+                        'ski'=> 0,
+                        'tennis'=>0,
+                        'golf'=>0,
                         )
                     )
                 );

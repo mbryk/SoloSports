@@ -71,25 +71,27 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
+            if(!Yii::app()->user->isGuest) Yii::app()->user->logout();
+            $model=new LoginForm;
+            
+            // if it is ajax validation request
+            if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+            {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+            
+            // collect user input data
+            if(isset($_POST['LoginForm']))
+            {
+                $model->attributes=$_POST['LoginForm'];
+                // validate user input and redirect to the previous page if valid
+                if($model->validate() && $model->login())
+                    $this->redirect(array('/main'));
+            }
+            
+            // display the login form
+            $this->render('login',array('model'=>$model));
 	}
 
 	/**
@@ -101,6 +103,42 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
         
+        public function actionRegister()
+        {
+            $model = new User;
+
+            if (isset($_POST['User'])) {
+                $code = 'imspecial';
+                if(isset($_POST['code']) && $_POST['code']==$code){
+                    $model->attributes = $_POST['User'];
+                    
+                    Yii::app()->user->setFlash('message', "Problem with Creating User. Please Try Again");
+                    if ($model->save()) {
+                        //now everything is saved as it was supposed to be
+                        Yii::app()->user->setFlash('message', "Successfully created user!");
+
+                        //auto login
+                        $identity = new UserIdentity($_POST['User']['username'], $_POST['User']['password']); //user original password entered, instead already hashed password                   
+                        $identity->authenticate();
+                        Yii::app()->user->login($identity, 0);
+                        
+                        $this->redirect(array('/main'));
+                    } else {
+                        $model->password = $_POST['User']['password'];
+                        $model->repeat_password = $_POST['User']['repeat_password'];
+                    }
+                }
+                else{
+                    Yii::app()->user->setFlash('message', "Sorry. We are in Beta and currently not accepting Registration. Please sign up for an invite.");
+                    $this->redirect(Yii::app()->homeUrl);
+                }
+            }
+            
+            $this->render('register', array(
+                'model' => $model,
+                ));
+	}
+            
 	public function actionMission()
 	{
             $this->render('mission');

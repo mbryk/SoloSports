@@ -49,6 +49,8 @@ body {
 .right-sec a{color:#999; padding:0px 5px; margin:0px; text-decoration:none; font-size:15px}
 .right-sec a:first-child{padding-left:0px;}
 .right-sec a:hover{text-decoration:underline;}
+.right-sec a.active{color:#6C6CE9;}
+.right-sec a.active:hover{text-decoration: none}
 .right-sec{float:right; padding-top:15px; margin:0px; color:#000}
 
 
@@ -474,7 +476,7 @@ body {
 		}
 		#templateBody{
 			background-color:#c95454;
-                        opacity: .7;
+                        opacity: .9;
                         border-radius: 30px;
 		}
 		.bodyContent{

@@ -5,10 +5,22 @@ class RankController extends Controller
 	public function actionTest()
 	{
             $model = new SkiQuiz();
+            $questions = array(
+                array(
+                    'question'=>'What do you ski?',
+                    'o1'=>'option 1', 
+                    'o2'=>'option 2'
+                    ),
+                array(
+                    'question'=>'What don\'t you ski?',
+                    'o1'=>'option 3', 
+                    'o2'=>'option 4'
+                    ),
+            );
             if(isset($_POST['finish'])){
                 var_dump($_POST);
             }
-            $this->render('test', array('model'=>$model));
+            $this->render('test', array('model'=>$model, 'questions'=>$questions));
 	}
 	public function actionSki()
 	{
