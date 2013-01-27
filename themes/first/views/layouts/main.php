@@ -76,7 +76,7 @@
             <a href="<?php echo Yii::app()->createUrl('site/contact')?>" <?php if($this->action->Id=='contact') echo 'class="active"'?>>Contact</a> | 
             <?php if(Yii::app()->user->isGuest) echo CHtml::link('Login', '/site/login'); ?>
             <!--<?php if(Yii::app()->user->isGuest) echo CHtml::link('Register', '/site/register'); ?>-->
-            <?php if(!Yii::app()->user->isGuest) echo CHtml::link('profile', '/main', array('class'=> ($this->getUniqueId()=='main')?'active':'')).' | '; ?>
+            <?php if(!Yii::app()->user->isGuest) echo CHtml::link('Profile', '/main', array('class'=> ($this->getUniqueId()=='main')?'active':'')).' | '; ?>
             <?php if(!Yii::app()->user->isGuest) echo CHtml::link('Logout ('.Yii::app()->user->name.')', '/site/logout'); ?>
         </div>
         <div class="cleardiv"></div>

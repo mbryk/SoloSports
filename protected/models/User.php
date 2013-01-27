@@ -12,6 +12,16 @@
  * @property integer $create_time
  * @property integer $lastvisit_time
  * @property integer $is_admin
+ * 
+ * The followings are the available model relations:
+ * @property Availabilities[] $availabilities
+ * @property Match[] $matches
+ * @property MatchInvites[] $matchInvites
+ * @property MatchInvites[] $matchInvites1
+ * @property RateAnswers[] $rateAnswers
+ * @property UserAttributes[] $userAttributes
+ * @property UserRatings[] $userRatings
+ * @property UserRatings[] $userRatings1
  */
 class User extends CActiveRecord
 {
@@ -55,7 +65,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-                        array('username, email, password', 'required', 'on'=>'insert'),
+                        array('username, email, password, repeat_password', 'required', 'on'=>'insert'),
 			array('create_time, lastvisit_time, is_admin', 'numerical', 'integerOnly'=>true),
 			array('username, email', 'length', 'max'=>45, 'on'=>'insert'),
 			array('repeat_password, password', 'length', 'max'=>60, 'on'=>'insert'),
@@ -79,6 +89,14 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'availabilities' => array(self::HAS_MANY, 'Availabilities', 'user_id'),
+                    'matches' => array(self::HAS_MANY, 'Match', 'user_id'),
+                    'matchInvites' => array(self::HAS_MANY, 'MatchInvites', 'user_id'),
+                    'matchInvites1' => array(self::HAS_MANY, 'MatchInvites', 'inviter_id'),
+                    'rateAnswers' => array(self::HAS_MANY, 'RateAnswers', 'user_id'),
+                    'userAttributes' => array(self::HAS_MANY, 'UserAttributes', 'user_id'),
+                    'userRatings' => array(self::HAS_MANY, 'UserRatings', 'rater_id'),
+                    'userRatings1' => array(self::HAS_MANY, 'UserRatings', 'ratee_id'),                    
 		);
 	}
 

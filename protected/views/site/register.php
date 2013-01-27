@@ -15,7 +15,7 @@ endif;
 
 <div class="mid-well">
 
-<table class="form" id="registerform">
+<table class="form" id="loginform">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'register-form',
 	'enableAjaxValidation'=>true,
@@ -23,21 +23,21 @@ endif;
 
 	<?php //echo $form->errorSummary($model); ?>
 	<tr>
-		<td><?php echo $form->label($model,'username'); ?></td>
+		<td><?php echo $form->labelEx($model,'username'); ?></td>
 		<td><?php echo $form->textField($model,'username') ?></td>
 		<td><?php echo $form->error($model,'username') ?></td>
         </tr>
 	<tr>
-		<td><?php echo $form->label($model,'email'); ?></td>
+		<td><?php echo $form->labelEx($model,'email'); ?></td>
 		<td><?php echo $form->textField($model,'email') ?></td>
 		<td><?php echo $form->error($model,'email') ?></td>
         </tr>
 	<tr>
-		<td><?php echo $form->label($model,'password'); ?></td>
+		<td><?php echo $form->labelEx($model,'password'); ?></td>
 		<td><?php echo $form->passwordField($model,'password') ?></td>
                 <td><?php echo $form->error($model,'password') ?></td>
 	<tr>
-		<td><?php echo $form->label($model,'repeat_password'); ?></td>
+		<td><?php echo $form->labelEx($model,'repeat_password'); ?></td>
 		<td><?php echo $form->passwordField($model,'repeat_password') ?></td>
                 <td><?php echo $form->error($model,'repeat_password') ?></td>                
         </tr>
